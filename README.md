@@ -21,7 +21,7 @@ Here are some useful notes to using this tool brewed with black magic xD !
 
 #### Credits and Thanks to People Who Helped me ####
 
-Script Made by [***Aryan Sinha***](https://github.com/techyminati)
+Script Made by [***Aryan Sinha***]
 
 Thanks Github For Running this on Github Actions
 
@@ -30,4 +30,3 @@ Thanks Github For Running this on Github Actions
 Enjoy With Your SSH Server for free.
 
 Note: This is just for testing and deployment of applications, I do not encourage misuse of Github Actions ! Thanks
-(c) Area69Lab
