@@ -1,0 +1,24 @@
+name: Dev Container Build and Run Action
+uses: devcontainers/ci@v0.3.1900000349
+  with:
+    imageName: ghcr.io/satorugojo2k23/ubuntu:latest
+    cacheFrom: ghcr.io/satorugojo2k23/ubuntu:latest
+    push: never
+on: 
+  workflow_dispatch:
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: fastai/workflows/ssh@master
+      with:
+        ssh_key: ${{ secrets.SSH_KEY }}
+        key_file: id_ecdsa
+    - uses: actions/checkout@v2
+    - run: source dev-container.sh
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@master
